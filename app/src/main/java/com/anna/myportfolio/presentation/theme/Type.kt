@@ -1,4 +1,4 @@
-package com.anna.myportfolio.ui.theme
+package com.anna.myportfolio.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

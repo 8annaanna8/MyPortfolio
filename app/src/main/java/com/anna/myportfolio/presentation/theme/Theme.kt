@@ -1,4 +1,4 @@
-package com.anna.myportfolio.ui.theme
+package com.anna.myportfolio.presentation.theme
 
 import android.app.Activity
 import android.os.Build
