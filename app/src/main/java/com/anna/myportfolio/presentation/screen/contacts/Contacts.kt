@@ -1,9 +1,7 @@
 package com.anna.myportfolio.presentation.screen.contacts
 
-import androidx.compose.ui.Modifier
-
 data class Contacts(
-    val name: String, // contact: PersonContact
+    val name: String,
     val profession: String,
     val phoneNumber: String,
     val email: String,
