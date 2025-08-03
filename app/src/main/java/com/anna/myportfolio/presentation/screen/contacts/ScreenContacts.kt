@@ -13,11 +13,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.anna.myportfolio.R
 import com.anna.myportfolio.presentation.sampleContact
 
 @Composable
@@ -31,8 +33,9 @@ fun ScreenContacts(
                 width = 280.dp,
                 height = 400.dp,
             )
-            .padding(8.dp)
-            .background(Color.Red),
+
+            .background(Color.Red)
+            .padding(8.dp), // падинг должен быть после бекграунда, рамку будет не видно
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround
     )
@@ -46,13 +49,13 @@ fun ScreenContacts(
             )
         Spacer(modifier = Modifier.height(8.dp))
 
-        ContactItem(title = "Phone", value = contact.phoneNumber)
-        ContactItem(title = "Email", value = contact.email)
-        ContactItem(title = "Address", value = contact.address)
-        ContactItem(title = "Telegram", value = contact.telegram)
-        ContactItem(title = "Vkontakte", value = contact.vkontakte)
-        ContactItem(title = "GitHub", value = contact.github)
-        ContactItem(title = "LinkedLn", value = contact.linkedLn)
+        ContactItem(title = stringResource(R.string.phone), value = contact.phoneNumber)
+        ContactItem(title = stringResource(R.string.email), value = contact.email)
+        ContactItem(title = stringResource(R.string.address), value = contact.address)
+        ContactItem(title = stringResource(R.string.telegram), value = contact.getOrDash(contact.telegram))
+        ContactItem(title = stringResource(R.string.vkontakte), value = contact.getOrDash(contact.vkontakte))
+        ContactItem(title = stringResource(R.string.git_hub), value = contact.getOrDash(contact.github))
+        ContactItem(title = stringResource(R.string.linkedLn), value = contact.getOrDash(contact.linkedLn))
     }
 }
 
@@ -60,6 +63,5 @@ fun ScreenContacts(
 )
 @Composable
 fun ScreenContactsPreview() {
-
     ScreenContacts(contact = sampleContact)
 }
