@@ -11,9 +11,3 @@ data class Contacts(
     val github: String?,
     val linkedLn: String?,
 )
-{
-
-fun getOrDash(value: String?): String {
-    return value ?: "-"
-}
-}

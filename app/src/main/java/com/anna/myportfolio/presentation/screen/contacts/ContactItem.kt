@@ -11,9 +11,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ContactItem(title: String, value: String) {
+fun ContactItem(title: String, value: String?) {
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Text(text = title, fontWeight = FontWeight.Bold, modifier = Modifier.padding(end = 16.dp)) // Отступ справа
-        Text(text = value)
+        val editedValue = value ?: "-"
+        Text(text = editedValue)
     }
 }

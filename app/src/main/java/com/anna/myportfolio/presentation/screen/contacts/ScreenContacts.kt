@@ -3,7 +3,6 @@ package com.anna.myportfolio.presentation.screen.contacts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -52,10 +51,10 @@ fun ScreenContacts(
         ContactItem(title = stringResource(R.string.phone), value = contact.phoneNumber)
         ContactItem(title = stringResource(R.string.email), value = contact.email)
         ContactItem(title = stringResource(R.string.address), value = contact.address)
-        ContactItem(title = stringResource(R.string.telegram), value = contact.getOrDash(contact.telegram))
-        ContactItem(title = stringResource(R.string.vkontakte), value = contact.getOrDash(contact.vkontakte))
-        ContactItem(title = stringResource(R.string.git_hub), value = contact.getOrDash(contact.github))
-        ContactItem(title = stringResource(R.string.linkedLn), value = contact.getOrDash(contact.linkedLn))
+        ContactItem(title = stringResource(R.string.telegram), value = contact.telegram)
+        ContactItem(title = stringResource(R.string.vkontakte), value = contact.vkontakte)
+        ContactItem(title = stringResource(R.string.git_hub), value = contact.github)
+        ContactItem(title = stringResource(R.string.linked_in), value = contact.linkedLn)
     }
 }
 
